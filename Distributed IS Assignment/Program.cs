@@ -88,7 +88,7 @@ namespace DIS_Assignmnet1_SPRING_2022
                 foreach (char l in s)
                 {
                     if (l != 'A' & l != 'E' & l != 'I' & l != 'O' & l != 'U' & l != 'a' & l != 'e' & l != 'i' & l != 'o' & l != 'u')
-                        //using if loop to remove vowels "AEIOU" and remove else
+                        //using if loop to remove vowels "AEIOU" and pass the string else
                     {
                         final_string = final_string + l;
                     }
@@ -127,7 +127,7 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                if (string.Join("", bulls_string1) == string.Join("", bulls_string2))
+                if (string.Join("", bulls_string1) == string.Join("", bulls_string2)) //comparing two bull_arays while joinig them
                 {
                     return true;
                 }
@@ -166,10 +166,10 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here
+                
                 int Str= 0;
                 int L = bull_bucks.Length;
-                foreach (int x in bull_bucks)
+                foreach (int x in bull_bucks) //overwriting the value of num by comparing integers if they are equal
                 {
                     int num = 0;
                     for (int i = 0; i < L; i++)
@@ -179,7 +179,7 @@ namespace DIS_Assignmnet1_SPRING_2022
                             num = num + 1;
                         }
                     }
-                    if (num == 1)
+                    if (num == 1) //when num value is 1, intergers are unique
                     {
                         Str = Str + x;
                     }
@@ -220,11 +220,11 @@ namespace DIS_Assignmnet1_SPRING_2022
                 int K = bulls_grid.Length;
                 int z = Convert.ToInt32(Math.Sqrt(K));
                 int a = 0;
-                for (int j = 0; j < z; j++)
+                for (int j = 0; j < z; j++) 
                 {
-                    a = a + bulls_grid[j, j] + bulls_grid[j, z - j - 1];
+                    a = a + bulls_grid[j, j] + bulls_grid[j, z - j - 1]; //adding the value of indexes of two diagonals
                 }
-                if (z % 2 != 0)
+                if (z % 2 != 0) //not even so, subtracting the repeated integers
                 {
                     return a - bulls_grid[(z - 1) / 2, (z - 1) / 2];
                 }
@@ -265,12 +265,12 @@ namespace DIS_Assignmnet1_SPRING_2022
                 // write your code here.
                 string[] m = new string[bulls_string.Length];
                 string ch = "";
-                for (int j = 0; j < bulls_string.Length; j++)
+                for (int j = 0; j < bulls_string.Length; j++) //comparing index values of m with bull strings
                 {
                     int s = indices[j];
                     m[s] = Convert.ToString(bulls_string[j]);
                 }
-                for (int j = 0; j < bulls_string.Length; j++)
+                for (int j = 0; j < bulls_string.Length; j++) //concatinating new string
                 {
                     ch = ch + m[j];
                 }
@@ -315,7 +315,7 @@ namespace DIS_Assignmnet1_SPRING_2022
             try
             {
                 string[] str = new string[bulls_string6.Length];
-                for (int j = 0; j < bulls_string6.Length; j++)
+                for (int j = 0; j < bulls_string6.Length; j++) //splliting the string at C
                 {
                     if (bulls_string6[j] == c)
                     {
@@ -323,7 +323,7 @@ namespace DIS_Assignmnet1_SPRING_2022
                     }
                 }
                 string p = "";
-                for (int j = str[0].Length - 1; j >= 0; j--)
+                for (int j = str[0].Length - 1; j >= 0; j--) //reversing the string
                 {
                     p = p + bulls_string6[j];
                 }

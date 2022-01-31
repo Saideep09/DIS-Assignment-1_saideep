@@ -85,14 +85,19 @@ namespace DIS_Assignmnet1_SPRING_2022
             {
                 // write your code here
                 String final_string = "";
-                foreach (char l in s)
-                {
-                    if (l != 'A' & l != 'E' & l != 'I' & l != 'O' & l != 'U' & l != 'a' & l != 'e' & l != 'i' & l != 'o' & l != 'u')
-                        //using if loop to remove vowels "AEIOU" and pass the string else
+                int le = s.Length;
+                if (le >= 0 && le <= 10000)
                     {
-                        final_string = final_string + l;
+                    foreach (char l in s)
+                    {
+                        if (l != 'A' & l != 'E' & l != 'I' & l != 'O' & l != 'U' & l != 'a' & l != 'e' & l != 'i' & l != 'o' & l != 'u')
+                        //using if loop to remove vowels "AEIOU" and pass the string else
+                        {
+                            final_string = final_string + l;
+                        }
                     }
                 }
+                
                 return final_string;
             }
             catch (Exception)
@@ -169,19 +174,22 @@ namespace DIS_Assignmnet1_SPRING_2022
                 
                 int Str= 0;
                 int L = bull_bucks.Length;
-                foreach (int x in bull_bucks) //overwriting the value of num by comparing integers if they are equal
+                if (L >= 1 && L <= 100) ;
                 {
-                    int num = 0;
-                    for (int i = 0; i < L; i++)
+                    foreach (int x in bull_bucks) //overwriting the value of num by comparing integers if they are equal
                     {
-                        if (x == bull_bucks[i])
+                        int num = 0;
+                        for (int i = 0; i < L; i++)
                         {
-                            num = num + 1;
+                            if (x == bull_bucks[i])
+                            {
+                                num = num + 1;
+                            }
                         }
-                    }
-                    if (num == 1) //when num value is 1, intergers are unique
-                    {
-                        Str = Str + x;
+                        if (num == 1) //when num value is 1, intergers are unique
+                        {
+                            Str = Str + x;
+                        }
                     }
                 }
                 return Str;
@@ -265,6 +273,12 @@ namespace DIS_Assignmnet1_SPRING_2022
                 // write your code here.
                 string[] m = new string[bulls_string.Length];
                 string ch = "";
+                int x = indices.Length;
+                if (bulls_string.Length >= 1 && bulls_string.Length <= 100 && indices.Length >= 0 && indices.Length <= 100) ;
+                
+                { 
+                
+                }
                 for (int j = 0; j < bulls_string.Length; j++) //comparing index values of m with bull strings
                 {
                     int s = indices[j];
